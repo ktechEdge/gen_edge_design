@@ -15,6 +15,9 @@ app.use(express.static(path.join(__dirname, "public")));
 app.get("/",(req, res) => {
     res.render("demo_page",{pageTitle:"עמוד כללי"});
 });
+app.get("/login",(req, res) => {
+    res.render("login_page",{pageTitle:"עמוד התחברות"});
+});
 
 app.listen(port, () => {            //server starts listening for any attempts from a client to connect at port: {port}
     console.log(`Now listening on port http://localhost:${port}`);
